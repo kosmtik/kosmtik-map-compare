@@ -1,0 +1,18 @@
+.map-compare,
+.map-compare-on #map {
+    width: calc((100% - 60px) / 2);
+}
+.map-compare-on #map {
+    left: calc((100% - 60px) / 2);
+}
+.map-compare {
+    right: calc((100% - 60px) / 2);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    top: 40px;
+    display: none;
+}
+.map-compare-on .map-compare {
+    display: block;
+}

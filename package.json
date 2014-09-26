@@ -1,0 +1,26 @@
+{
+  "name": "kosmtik-map-compare",
+  "version": "0.0.1",
+  "description": "Add a map to compare side-by-side with your work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kosmtik/kosmtik-map-compare.git"
+  },
+  "keywords": [
+    "kosmtik",
+    "openstreetmap",
+    "map",
+    "carto"
+  ],
+  "author": "Yohan Boniface",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/kosmtik/kosmtik-map-compare/issues"
+  },
+  "homepage": "https://github.com/kosmtik/kosmtik-map-compare",
+  "kosmtik": "~0.0.3"
+}
