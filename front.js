@@ -19,7 +19,7 @@ L.K.Map.addInitHook(function () {
         var builder = new L.K.FormBuilder(params, [
             ['active', {handler: L.K.Switch, label: 'Active'}],
             ['tms', {handler: L.K.Switch, label: 'TMS format.'}],
-            ['url', {helpText: 'URL template.'}]
+            ['url', {handler: 'BlurInput', helpText: 'URL template.'}]
         ], {id: 'compare-form'});
         // TODO vertical / horizontal view
         builder.on('synced', function (e) {
