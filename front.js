@@ -5,7 +5,9 @@ L.K.Map.addInitHook(function () {
             params = {
                 tms: false,
                 url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
-                active: false
+                active: false,
+                minZoom: this.options.minZoom,
+                maxZoom: this.options.maxZoom
             };
         title.innerHTML = 'Map compare';
         var tilelayer, otherMap,

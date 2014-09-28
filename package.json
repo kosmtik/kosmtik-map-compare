@@ -1,6 +1,6 @@
 {
   "name": "kosmtik-map-compare",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Add a map to compare side-by-side with your work",
   "main": "index.js",
   "scripts": {
