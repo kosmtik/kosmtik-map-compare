@@ -4,7 +4,7 @@ L.K.Map.addInitHook(function () {
             title = L.DomUtil.create('h3', '', container),
             params = {
                 tms: false,
-                url: 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                url: L.K.Config.project.compareUrl,
                 active: false,
                 minZoom: this.options.minZoom,
                 maxZoom: this.options.maxZoom
