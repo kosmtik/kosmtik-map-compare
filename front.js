@@ -19,22 +19,25 @@ L.K.Map.addInitHook(function () {
                 new L.Hash(otherMap);
             };
         var builder = new L.K.FormBuilder(params, [
-            ['active', {handler: L.K.Switch, label: 'Active'}],
+            ['active', {handler: L.K.Switch, label: 'Active (ctrl+alt+C)'}],
             ['tms', {handler: L.K.Switch, label: 'TMS format.'}],
             ['url', {handler: 'BlurInput', helpText: 'URL template.'}]
         ], {id: 'compare-form'});
         // TODO vertical / horizontal view
+        var toggle = function () {
+            if (params.active) {
+                if (!otherMap) init();
+                L.DomUtil.addClass(document.body, 'map-compare-on');
+                otherMap.invalidateSize();
+                this.invalidateSize();
+            } else {
+                L.DomUtil.removeClass(document.body, 'map-compare-on');
+                this.invalidateSize();
+            }
+        }
         builder.on('synced', function (e) {
             if (e.field === 'active') {
-                if (params.active) {
-                    if (!otherMap) init();
-                    L.DomUtil.addClass(document.body, 'map-compare-on');
-                    otherMap.invalidateSize();
-                    this.invalidateSize();
-                } else {
-                    L.DomUtil.removeClass(document.body, 'map-compare-on');
-                    this.invalidateSize();
-                }
+                L.bind(toggle, this)();
             } else if (e.field === 'url' && tilelayer) {
                 tilelayer.setUrl(params.url);
             }
@@ -45,5 +48,18 @@ L.K.Map.addInitHook(function () {
             content: container
         });
         this.sidebar.rebuild();
+        var shortcutCallback = function () {
+            params.active = !params.active;
+            L.bind(toggle, this)();
+            builder.fetchAll();
+        };
+        this.shortcuts.add({
+            keyCode: L.K.Keys.C,
+            ctrlKey: true,
+            altKey: true,
+            callback: shortcutCallback,
+            context: this,
+            description: 'Toggle map compare view'
+        });
     });
 });
