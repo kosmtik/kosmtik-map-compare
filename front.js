@@ -27,7 +27,7 @@ L.K.Map.addInitHook(function () {
             params = {
                 tms: false,
                 url: '',
-                suggestedUrl: '',
+                suggestedUrl: L.K.Config.project.compareUrl,
                 active: false,
                 minZoom: this.options.minZoom,
                 maxZoom: this.options.maxZoom
@@ -60,6 +60,7 @@ L.K.Map.addInitHook(function () {
             }
         };
         var setUrl = function () {
+            if (!otherMap) init();
             tilelayer.setUrl(params.url || params.suggestedUrl);
         };
         builder.on('synced', function (e) {
