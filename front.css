@@ -12,6 +12,7 @@
     position: absolute;
     top: 40px;
     display: none;
+    border-right: 1px solid #aaa;
 }
 .map-compare-on .map-compare {
     display: block;
