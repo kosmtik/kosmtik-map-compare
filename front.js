@@ -76,18 +76,18 @@ L.K.Map.addInitHook(function () {
             content: container
         });
         this.sidebar.rebuild();
-        var shortcutCallback = function () {
+        var commandCallback = function () {
             params.active = !params.active;
             L.bind(toggle, this)();
             builder.fetchAll();
         };
-        this.shortcuts.add({
+        this.commands.add({
             keyCode: L.K.Keys.C,
             ctrlKey: true,
             altKey: true,
-            callback: shortcutCallback,
+            callback: commandCallback,
             context: this,
-            description: 'Toggle map compare view'
+            name: 'Map compare: toggle view'
         });
     });
 });
