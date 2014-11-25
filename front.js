@@ -73,6 +73,7 @@ L.K.Map.addInitHook(function () {
         container.appendChild(builder.build());
         this.sidebar.addTab({
             label: 'Compare',
+            className: 'compare',
             content: container
         });
         this.sidebar.rebuild();
@@ -88,6 +89,11 @@ L.K.Map.addInitHook(function () {
             callback: commandCallback,
             context: this,
             name: 'Map compare: toggle view'
+        });
+        this.commands.add({
+            callback: function () {this.sidebar.open('.compare');},
+            context: this,
+            name: 'Map compare: configure'
         });
     });
 });
