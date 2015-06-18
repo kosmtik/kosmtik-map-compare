@@ -16,7 +16,7 @@ var TILELAYERS = [
     ['http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', 'Hydda'],
     ['http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', 'OpenTopoMap'],
     ['http://{s}.tile.openstreetmap.fr/openriverboatmap/{z}/{x}/{y}.png', 'OpenRiverboatMap'],
-    ['http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 'OSM - Deutschland'],
+    ['http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 'OSM - Deutschland']
 ];
 
 
@@ -61,12 +61,12 @@ L.K.Map.addInitHook(function () {
         };
         var setUrl = function () {
             if (!otherMap) init();
-            tilelayer.setUrl(params.url || params.suggestedUrl);
+            tilelayer.setUrl(params.url || params.suggestedUrl);
         };
-        builder.on('synced', function (e) {
-            if (e.field === 'active') {
+        builder.on('postsync', function (e) {
+            if (e.helper.field === 'active') {
                 L.bind(toggle, this)();
-            } else if (e.field === 'url' || e.field === 'suggestedUrl') {
+            } else if (e.helper.field === 'url' || e.helper.field === 'suggestedUrl') {
                 setUrl();
             }
         }, this);
@@ -91,7 +91,7 @@ L.K.Map.addInitHook(function () {
             name: 'Map compare: toggle view'
         });
         this.commands.add({
-            callback: function () {this.sidebar.open('.compare');},
+            callback: function () { this.sidebar.open('.compare'); },
             context: this,
             name: 'Map compare: configure'
         });
