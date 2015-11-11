@@ -20,10 +20,44 @@ var TILELAYERS = [
 ];
 
 
+L.K.MapCompare = L.Evented.extend({
+
+    initialize: function () {
+        this._maps = [];
+        for (var i = 0; i < arguments.length; i++) {
+            this.register(arguments[i]);
+        }
+    },
+
+    register: function (map) {
+        if (this._maps.indexOf(map) !== -1) return;
+        this._maps.push(map);
+        map.on('moveend', this.moveend, this);
+    },
+
+    moveend: function (e) {
+        if (!this._master) {
+            this._master = e.target;
+            this.propagate();
+            this._master = null;
+        }
+    },
+
+    propagate: function () {
+        for (var map of this._maps) {
+            if (map === this._master) continue;
+            map.setView(this._master.getCenter(), this._master.getZoom(), {animate: false});
+        }
+    }
+
+});
+
+
 L.K.Map.addInitHook(function () {
     this.whenReady(function () {
         var container = L.DomUtil.create('div', 'map-compare-container'),
             title = L.DomUtil.create('h3', '', container),
+            self = this,
             params = {
                 tms: false,
                 url: '',
@@ -39,7 +73,7 @@ L.K.Map.addInitHook(function () {
                 container.id = 'mapCompare';
                 otherMap = L.map(container.id, {attributionControl: false});
                 tilelayer = L.tileLayer(L.K.Config.project.compareUrl, params).addTo(otherMap);
-                new L.Hash(otherMap);
+                new L.K.MapCompare(self, otherMap);
             };
         var builder = new L.K.FormBuilder(params, [
             ['active', {handler: L.K.Switch, label: 'Active (ctrl+alt+C)'}],
