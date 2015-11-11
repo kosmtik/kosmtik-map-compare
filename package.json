@@ -1,6 +1,6 @@
 {
   "name": "kosmtik-map-compare",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "Add a map to compare side-by-side with your work",
   "main": "index.js",
   "scripts": {
@@ -22,5 +22,5 @@
     "url": "https://github.com/kosmtik/kosmtik-map-compare/issues"
   },
   "homepage": "https://github.com/kosmtik/kosmtik-map-compare",
-  "kosmtik": "~0.0.11"
+  "kosmtik": "~0.0.13"
 }
