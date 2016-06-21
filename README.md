@@ -3,11 +3,15 @@
 Compare your work in progress side-by-side with another
 map.
 
-## Install
+## Install
 
 While in your kosmtik root, type:
 
 `node index.js plugins --install kosmtik-map-compare`
+
+## Start
+
+Use ctrl+alt+c shortcut to toggle comparison mode or use option panel on the right side of the window.
 
 ## Config
 
