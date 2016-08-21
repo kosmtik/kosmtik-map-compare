@@ -7,7 +7,6 @@ var TILELAYERS = [
     ['http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png', 'Landscape'],
     ['http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', 'Toner'],
     ['http://{s}.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png', 'Transport'],
-    ['http://otile1.mqcdn.com/tiles/1.0.0/osm/{z}/{x}/{y}.png', 'MapQuest Open'],
     ['http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', 'OpenCycleMap'],
     ['http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
     ['http://toolserver.org/tiles/hikebike/{z}/{x}/{y}.png', 'hikebikemap'],
