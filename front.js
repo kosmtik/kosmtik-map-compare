@@ -1,6 +1,7 @@
 var TILELAYERS = [
     ['http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'OpenStreetMap'],
     ['http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 'Humanitarian'],
+    ['https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', 'Wikimedia'],
     ['http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', 'Outdoors'],
     ['http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', 'OSM-Fr'],
     ['http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}', 'OSM Roads'],
