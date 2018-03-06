@@ -67,6 +67,7 @@ L.K.Map.addInitHook(function () {
                 maxZoom: this.options.maxZoom
             };
         title.innerHTML = 'Map compare';
+        TILELAYERS = TILELAYERS.concat(L.K.Config.project.compareUrls);
         if (TILELAYERS.indexOf(L.K.Config.project.compareUrl) === -1) TILELAYERS.unshift([L.K.Config.project.compareUrl, 'Default']);
         var tilelayer, otherMap,
             init = function () {
