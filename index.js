@@ -1,6 +1,5 @@
 var patchConfig = function (e) {
     e.options.compareUrl = e.project.mml.compareUrl || this.userConfig.compareUrl || 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
-    e.options.compareUrls = e.project.mml.compareUrls || this.userConfig.compareUrls || [];
 };
 
 exports.Plugin = function (config) {
