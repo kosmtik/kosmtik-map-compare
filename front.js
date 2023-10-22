@@ -4,7 +4,7 @@ var TILELAYERS = [
     ['https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', 'Wikimedia'],
     ['https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', 'Outdoors'],
     ['https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', 'OSM-Fr'],
-    ['https://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', 'Toner'],
+    ['https://{s}.tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png', 'Toner'],
     ['https://{s}.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png', 'Transport'],
     ['https://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', 'OpenCycleMap'],
     ['https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
