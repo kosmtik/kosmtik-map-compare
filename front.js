@@ -4,13 +4,15 @@ var TILELAYERS = [
     ['https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', 'Wikimedia'],
     ['https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', 'Outdoors'],
     ['https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', 'OSM-Fr'],
-    ['https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.png', 'Toner'],
+    ['https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.jpg', 'Toner'],
     ['https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', 'Transport'],
     ['https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', 'OpenCycleMap'],
     ['https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
     ['https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', 'OpenTopoMap'],
     ['https://{s}.tile.openstreetmap.fr/openriverboatmap/{z}/{x}/{y}.png', 'OpenRiverboatMap'],
-    ['https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', 'OSM - Deutschland']
+    ['https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', 'OSM - Deutschland'],
+    ['https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', 'Terrain'],
+    ['https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png', 'ÖPNVKarte'],
 ];
 
 L.K.MapCompare = L.Evented.extend({
