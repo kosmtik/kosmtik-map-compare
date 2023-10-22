@@ -11,7 +11,6 @@ var TILELAYERS = [
     ['https://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', 'OpenCycleMap'],
     ['https://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
     ['https://toolserver.org/tiles/hikebike/{z}/{x}/{y}.png', 'hikebikemap'],
-    ['https://www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', 'OSM monochrome'],
     ['https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', 'OpenTopoMap'],
     ['https://{s}.tile.openstreetmap.fr/openriverboatmap/{z}/{x}/{y}.png', 'OpenRiverboatMap'],
     ['https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 'OSM - Deutschland']
