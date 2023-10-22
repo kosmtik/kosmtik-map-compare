@@ -10,7 +10,7 @@ var TILELAYERS = [
     ['https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
     ['https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', 'OpenTopoMap'],
     ['https://{s}.tile.openstreetmap.fr/openriverboatmap/{z}/{x}/{y}.png', 'OpenRiverboatMap'],
-    ['https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 'OSM - Deutschland']
+    ['https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', 'OSM - Deutschland']
 ];
 
 L.K.MapCompare = L.Evented.extend({
