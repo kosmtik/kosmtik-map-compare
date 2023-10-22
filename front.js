@@ -13,6 +13,7 @@ var TILELAYERS = [
     ['https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', 'OSM - Deutschland'],
     ['https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', 'Terrain'],
     ['https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png', 'ÖPNVKarte'],
+    ['https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', 'CyclOSM'],
 ];
 
 L.K.MapCompare = L.Evented.extend({
