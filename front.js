@@ -1,24 +1,20 @@
 var TILELAYERS = [
-    ['http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'OpenStreetMap'],
-    ['http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 'Humanitarian'],
+    ['https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', 'OpenStreetMap'],
+    ['https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', 'Humanitarian'],
     ['https://maps.wikimedia.org/osm-intl/{z}/{x}/{y}.png', 'Wikimedia'],
-    ['http://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', 'Outdoors'],
-    ['http://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', 'OSM-Fr'],
-    ['http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}', 'OSM Roads'],
-    ['http://{s}.tile3.opencyclemap.org/landscape/{z}/{x}/{y}.png', 'Landscape'],
-    ['http://{s}.tile.stamen.com/toner-lite/{z}/{x}/{y}.png', 'Toner'],
-    ['http://{s}.tile2.opencyclemap.org/transport/{z}/{x}/{y}.png', 'Transport'],
-    ['http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png', 'OpenCycleMap'],
-    ['http://{s}.tile.stamen.com/watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
-    ['http://toolserver.org/tiles/hikebike/{z}/{x}/{y}.png', 'hikebikemap'],
-    ['http://tiles.lyrk.org/ls/{z}/{x}/{y}?apikey=982c82cc765f42cf950a57de0d891076', 'Lyrk'],
-    ['http://www.toolserver.org/tiles/bw-mapnik/{z}/{x}/{y}.png', 'OSM monochrome'],
-    ['http://{s}.tile.openstreetmap.se/hydda/full/{z}/{x}/{y}.png', 'Hydda'],
-    ['http://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', 'OpenTopoMap'],
-    ['http://{s}.tile.openstreetmap.fr/openriverboatmap/{z}/{x}/{y}.png', 'OpenRiverboatMap'],
-    ['http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', 'OSM - Deutschland']
+    ['https://{s}.tile.thunderforest.com/outdoors/{z}/{x}/{y}.png', 'Outdoors'],
+    ['https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', 'OSM-Fr'],
+    ['https://tiles.stadiamaps.com/tiles/stamen_toner/{z}/{x}/{y}.jpg', 'Toner'],
+    ['https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', 'Transport'],
+    ['https://{s}.tile.thunderforest.com/cycle/{z}/{x}/{y}.png', 'OpenCycleMap'],
+    ['https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', 'Watercolor'],
+    ['https://{s}.tile.opentopomap.org/{z}/{x}/{y}.png', 'OpenTopoMap'],
+    ['https://{s}.tile.openstreetmap.fr/openriverboatmap/{z}/{x}/{y}.png', 'OpenRiverboatMap'],
+    ['https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png', 'OSM - Deutschland'],
+    ['https://tiles.stadiamaps.com/tiles/stamen_watercolor/{z}/{x}/{y}.jpg', 'Terrain'],
+    ['https://tileserver.memomaps.de/tilegen/{z}/{x}/{y}.png', 'ÖPNVKarte'],
+    ['https://{s}.tile-cyclosm.openstreetmap.fr/cyclosm/{z}/{x}/{y}.png', 'CyclOSM'],
 ];
-
 
 L.K.MapCompare = L.Evented.extend({
 
