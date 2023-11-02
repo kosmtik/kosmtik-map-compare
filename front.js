@@ -54,22 +54,33 @@ L.K.Map.addInitHook(function () {
         var container = L.DomUtil.create('div', 'map-compare-container'),
             title = L.DomUtil.create('h3', '', container),
             self = this,
+            defaultlayer = TILELAYERS[0][0],
             params = {
                 tms: false,
                 url: '',
-                suggestedUrl: L.K.Config.project.compareUrl,
+                suggestedUrl: typeof L.K.Config.project.compareUrl === 'string' ? L.K.Config.project.compareUrl : false,
                 active: false,
                 minZoom: this.options.minZoom,
                 maxZoom: this.options.maxZoom
             };
         title.innerHTML = 'Map compare';
-        if (TILELAYERS.indexOf(L.K.Config.project.compareUrl) === -1) TILELAYERS.unshift([L.K.Config.project.compareUrl, 'Default']);
+        if (typeof L.K.Config.project.compareUrl === 'object') {
+            if (typeof L.K.Config.project.compareUrl[0] === 'object') {
+                TILELAYERS = TILELAYERS.concat(L.K.Config.project.compareUrl);
+            } else {
+                TILELAYERS.push(L.K.Config.project.compareUrl);
+            }
+            defaultlayer = TILELAYERS[0][0];
+        } else {
+            if (TILELAYERS.indexOf(L.K.Config.project.compareUrl) === -1) TILELAYERS.unshift([L.K.Config.project.compareUrl, 'Default']);
+            defaultlayer = L.K.Config.project.compareUrl;
+        }
         var tilelayer, otherMap,
             init = function () {
                 var container = L.DomUtil.create('div', 'map-compare', document.body);
                 container.id = 'mapCompare';
                 otherMap = L.map(container.id, {attributionControl: false});
-                tilelayer = L.tileLayer(L.K.Config.project.compareUrl, params).addTo(otherMap);
+                tilelayer = L.tileLayer(defaultlayer, params).addTo(otherMap);
                 new L.K.MapCompare(self, otherMap);
             };
         var builder = new L.K.FormBuilder(params, [
